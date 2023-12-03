@@ -15,7 +15,7 @@ let router = express.Router();
 let Msubscribe = [isloggedIn, isMongoId];
 let Mfindidchanel = [isloggedIn, isMongoId];
 
-router.post("/channel", isloggedIn, create_chanel);
+router.post("/channel", create_chanel);
 router.get("/channel", isloggedIn, all_channels);
 router.get("/channel/:id", Mfindidchanel, find_id_channel);
 router.put("/channel/:id", isloggedIn, edit_chanels);
