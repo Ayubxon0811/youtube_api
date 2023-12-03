@@ -16,7 +16,7 @@ let Msubscribe = [isloggedIn, isMongoId];
 let Mfindidchanel = [isloggedIn, isMongoId];
 
 router.post("/channel", create_chanel);
-router.get("/channel", isloggedIn, all_channels);
+router.get("/channel", all_channels);
 router.get("/channel/:id", Mfindidchanel, find_id_channel);
 router.put("/channel/:id", isloggedIn, edit_chanels);
 router.delete("/channel/:id", isloggedIn, delete_chanels);
